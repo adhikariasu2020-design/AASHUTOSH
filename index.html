@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aashutosh Adhikari | Student & Tech Enthusiast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo-container">
+    <img src="images/Aashutosh logo.jpg" alt="Aashutosh Adhikari Logo">
+    <h1>Aashutosh Adhikari</h1>
+  </div>
+  <ul>
+    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+    <li><a href="#skills"><i class="fas fa-lightbulb"></i> Skills</a></li>
+    <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <div class="hero-text reveal">
+      <h2>आशुतोष अधिकारी</h2>
+      <div class="typing" id="typing"></div>
+      <p>Computer Science student with a strong interest in programming, web development, and modern technologies. Focused on writing clean, efficient code and continuously expanding technical knowledge.</p>
+      
+      <div class="hero-cta">
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get in Touch</button>
+        
+      </div>
+    </div>
+
+    <div class="hero-img reveal">
+      <img src="images/aa.jpg" alt="Aashutosh Adhikari Profile Photo">
+    </div>
+  </div>
+</section>
+
+<div class="quote reveal">Turning curiosity into code and knowledge into impact.</div>
+
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <p>Currently pursuing +2 in Science, I view education as a foundation for both intellectual growth and personal character development. I maintain discipline, responsibility, and consistency in my academic pursuits while valuing honesty, sustained effort, and continuous self-improvement. I actively learn from challenges and aim to apply acquired knowledge in meaningful ways to contribute positively to society.</p>
+</section>
+
+<section id="education" class="reveal">
+  <h2>Education</h2>
+  <div class="grid-container">
+    <div class="card reveal">
+      <h3>Secondary Education Examination (SEE)</h3>
+      <p>Sacred Heart Secondary School</p>
+      <p><strong>Grade: A+</strong></p>
+    </div>
+    <div class="card reveal">
+      <h3>+2 Science</h3>
+      <p>Xavier International College</p>
+      <p><strong>Ongoing</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="grid-container">
+    <div class="card reveal">HTML & CSS</div>
+    <div class="card reveal">Self Disciplined</div>
+    <div class="card reveal">Web Design & Layout</div>
+    <div class="card reveal">MS Office Suite</div>
+    <div class="card reveal">Effective Communication</div>
+    <div class="card reveal">Effective Learning</div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <div class="grid-container">
+    <div class="card reveal">
+      <h3>Personal Portfolio Website</h3>
+      <p>Responsive single-page portfolio built with HTML, CSS, and JavaScript featuring modern design and scroll-snap navigation.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Mini Game using Scratch</h3>
+      <p>Interactive game developed using Scratch programming environment.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+  <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <p><strong>Email:</strong> <span id="email">asudhikari1617@gmail.com</span> 
+      <button onclick="copyEmail()" style="margin-left:10px; padding:6px 14px; background:var(--primary); color:white; border:none; border-radius:6px; cursor:pointer;">Copy</button>
+    </p>
+    <p><strong>Phone:</strong> +977-9762113076</p>
+    <p><strong>Location:</strong> Kathmandu, Nepal</p>
+
+    <div class="contact-socials">
+      <a href="https://github.com/adhikariasu2020-design" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100066756383071" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <a href="Aashutosh_Adhikari_CV.pdf" download style="display:inline-block; margin-top:40px; padding:14px 36px; background:var(--primary); color:white; border-radius:50px; text-decoration:none; font-weight:600;">Download Resume</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Aashutosh Adhikari. All rights reserved.
+</footer>
+
+<script>
+// Typing animation
+const texts = ["Student | Designer | Tech Enthusiast"];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type() {
+  if (count === texts.length) count = 0;
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  document.getElementById('typing').textContent = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+    setTimeout(type, 1400);
+  } else {
+    setTimeout(type, 120);
+  }
+})();
+
+// Copy email
+function copyEmail() {
+  const email = document.getElementById('email').textContent;
+  navigator.clipboard.writeText(email).then(() => {
+    alert('Email copied to clipboard');
+  }).catch(() => alert('Failed to copy'));
+}
+
+// Reveal on scroll
+const revealItems = document.querySelectorAll('.reveal, .hero-text, .hero-img, .grid-container .card, section h2, .quote');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+
+revealItems.forEach(item => revealObserver.observe(item));
+</script>
+</body>
+</html>
