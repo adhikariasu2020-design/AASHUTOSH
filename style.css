@@ -413,4 +413,5 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition: none !important; animation: none !important; transform: none !important; }
       .reveal, .hero-text, .hero-img, .card { opacity: 1 !important; transform: none !important; }
+
     }
