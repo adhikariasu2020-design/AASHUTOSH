@@ -172,6 +172,7 @@
       opacity: 0;
       transform: translateY(35px) scale(0.97);
       transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+      font-size:35px
     }
 
     .reveal.visible {
@@ -415,3 +416,4 @@
       .reveal, .hero-text, .hero-img, .card { opacity: 1 !important; transform: none !important; }
 
     }
+
